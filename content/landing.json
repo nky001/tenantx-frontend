@@ -1,0 +1,35 @@
+{
+  "title": "TenantX Project",
+  "subtitle": "Multi-Tenant Task Management Demo",
+  "description": "A simple project to demonstrate multi-tenant architecture with Spring Boot and Next.js. Manage tasks across different organizations with basic user roles.",
+  "signInButton": "Sign In",
+  "signUpButton": "Get Started",
+  "features": {
+    "title": "Features",
+    "items": [
+      {
+        "title": "Multi-Tenant Setup",
+        "description": "Basic organization-based data separation for learning purposes."
+      },
+      {
+        "title": "User Roles",
+        "description": "Simple role-based access with admin, manager, and member levels."
+      },
+      {
+        "title": "Basic Task Management",
+        "description": "Create and manage tasks within projects and organizations."
+      },
+      {
+        "title": "Spring Boot + Next.js",
+        "description": "Full-stack demo using modern web technologies."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025 TenantX Project",
+    "links": [
+      {"text": "GitHub", "href": "https://github.com/nky001/tenantx-backend"},
+      {"text": "About", "href": "#"}
+    ]
+  }
+}
