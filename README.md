@@ -1,75 +1,148 @@
-# TenantX Frontend (Next.js)
+# TenantX Frontend
 
-This frontend is part of **TenantX**, a learning project that demonstrates a multi-tenant UI (organizations → projects → tasks) with JWT-based authentication.
+**Live Demo**: [https://tenantx.niti.life](https://tenantx.niti.life)
 
-## Getting Started
+A learning project demonstrating multi-tenant architecture with Next.js and TypeScript. This frontend showcases basic authentication, state management, and responsive design patterns.
 
-First, install dependencies:
+## 🏗️ Architecture Overview
 
-```bash
-npm install
-```
+**Frontend**: Next.js 16 + TypeScript + Tailwind CSS
+**Backend**: Spring Boot + AWS Lambda + PostgreSQL
 
-Then run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-```
+- 🔐 **Authentication**: JWT-based auth with email/password and OAuth2
+- 🏢 **Multi-Tenant**: Organization-scoped data isolation
+- 📱 **Responsive Design**: Mobile-first UI with Tailwind CSS
+- 🎯 **TypeScript**: Full type safety
+- ⚡ **Next.js 16**: App Router implementation
+- 🔄 **State Management**: Zustand for global state
+- 📝 **Form Validation**: React Hook Form + Zod
+- 🚀 **Deployment**: AWS with CI/CD pipeline
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-## Tech Stack
-
-- **Framework**: Next.js 16 with App Router
+### Frontend
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
+- **Styling**: Tailwind CSS
 - **State Management**: Zustand
-- **Forms**: React Hook Form with Zod validation
+- **Forms**: React Hook Form + Zod
 - **HTTP Client**: Axios
 
-## What this frontend demonstrates
+### Backend Integration
+- **API**: RESTful endpoints
+- **Database**: PostgreSQL
+- **Deployment**: AWS Lambda
 
-- Auth flow (register/login/logout) + persisted auth state (Zustand)
-- Tenant-scoped navigation (switch organizations, then view related data)
-- Simple forms with validation (React Hook Form + Zod)
+## 🚀 Quick Start
 
-## Project Structure
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/nky001/tenantx-frontend.git
+cd tenantx-frontend
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env.local
+# Edit .env.local with your API URL
+```
+
+### Development
+
+```bash
+# Start development server
+npm run dev
+# Open http://localhost:3000
+```
+
+### Production Build
+
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+```
+
+## 📁 Project Structure
 
 ```
 frontend/
-├── app/              # Next.js app router pages
-│   ├── api/          # API routes
-│   ├── components/   # Shared components
-│   ├── dashboard/    # Dashboard page
-│   ├── login/        # Login page
-│   ├── organizations/ # Organization management
-│   └── register/     # Registration page
-├── components/       # Reusable React components
-├── lib/              # Utilities, stores, and services
-│   ├── auth-store.ts # Authentication state management
-│   ├── api.ts        # API client configuration
-│   └── services/     # API service functions
-└── content/          # Static content and translations
+├── app/                    # Next.js App Router
+│   ├── api/               # API routes (middleware)
+│   ├── components/        # Shared components
+│   ├── dashboard/         # Main dashboard
+│   ├── login/            # Authentication
+│   ├── organizations/    # Org management
+│   └── register/         # User registration
+├── components/            # Reusable UI components
+├── lib/                  # Core utilities
+│   ├── auth-store.ts     # Authentication state
+│   ├── api.ts           # API client setup
+│   └── services/        # Business logic
+├── content/              # Static content & i18n
+└── public/               # Static assets
 ```
 
-## Available Scripts
+## 🔧 Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+- `npm run dev` - Development server with hot reload
+- `npm run build` - Production build optimization
+- `npm run start` - Production server
+- `npm run lint` - ESLint code quality checks
 
-## Learn More
+## 🌐 Live Deployment
+
+- **Frontend**: [https://tenantx.niti.life](https://tenantx.niti.life)
+- **Backend API**: [https://tenantx-api.niti.life](https://tenantx-api.niti.life)
+
+## 🎯 Learning Outcomes
+
+### Frontend Development
+- **React Patterns**: Hooks, Context, Custom Hooks
+- **TypeScript**: Strict typing and interfaces
+- **State Management**: Global state with Zustand
+- **API Integration**: RESTful APIs with error handling
+- **Form Handling**: Complex forms with validation
+- **Responsive Design**: Mobile-first approach
+
+### Full-Stack Integration
+- **Authentication**: JWT and OAuth2 flows
+- **Multi-Tenant**: Organization-scoped data
+- **Deployment**: AWS serverless architecture
+- **CI/CD**: Automated testing and deployment
+
+## 📚 Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS](https://tailwindcss.com/docs)
-- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Zustand State Management](https://zustand-demo.pmnd.rs/)
+- [React Hook Form](https://react-hook-form.com/)
+- [AWS Lambda](https://aws.amazon.com/lambda/)
 
-## License
+## 🤝 Contributing
 
-Apache License 2.0 - see LICENSE file for details
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-## Links
+## 📄 License
 
-- [Main Repository](https://github.com/nky001/tenantx-backend)
-- [Backend API](http://localhost:8080) (when running)
+Apache License 2.0 - see [LICENSE](LICENSE) file for details
+
+## 🔗 Links
+
+- [Backend Repository](https://github.com/nky001/tenantx-backend)
+- [Live Demo](https://tenantx.niti.life)
